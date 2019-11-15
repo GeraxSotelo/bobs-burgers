@@ -10,5 +10,19 @@ main {
 
 #bob-pic {
   max-width: 20em;
-  /* margin: auto; */
+}
+
+#multiplier-img img {
+  max-width: 10em;
+  /* display: none; */
+}
+
+@media only screen and (max-width: 767px) {
+  #bob-pic {
+    max-width: 15em;
+  }
+
+  #multiplier-img img {
+    max-width: 8em;
+  }
 }
