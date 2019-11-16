@@ -19,10 +19,14 @@ main {
 
 @media only screen and (max-width: 767px) {
   #bob-pic {
-    max-width: 15em;
+    max-width: 14.5em;
   }
 
   #multiplier-img img {
     max-width: 8em;
   }
+}
+
+button {
+  height: 100%;
 }

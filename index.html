@@ -32,7 +32,7 @@
               alt="">
           </div>
           <div class="col-12">
-            <h2>Money: $<span id="moneyDisplay">0</span></h2>
+            <h2>Money: $<span id="money-display">0</span></h2>
           </div>
         </div>
       </div>
@@ -68,26 +68,31 @@
     <div class="row">
       <div class="col-md-6 text-center">
         <div class="row pt-3 pb-1">
-          <div class="col"><button class="btn btn-warning">Golden Spatula $<span>100</span></button></div>
-          <div class="col"><button class="btn btn-warning">Golden Spatula $<span>100</span></button></div>
+          <div class="col">
+            <button id="upgrade-spatula" class="btn btn-info" onclick="buySpatulaUpgrade()">
+              <span id="spatula-display">Big</span> Spatula $<span id="spatula-price">50</span>
+            </button>
+          </div>
+          <div class="col"><button class="btn btn-info">Placeholder Button $<span>100</span></button></div>
         </div>
         <div class="row pt-1 pb-3">
-          <div class="col"><button class="btn btn-warning">Golden Spatula $<span>100</span></button></div>
-          <div class="col"><button class="btn btn-warning">Golden Spatula $<span>100</span></button></div>
+          <div class="col"><button class="btn btn-info">Placeholder Button $<span>100</span></button></div>
+          <div class="col"><button id="hire-employee" class="btn btn-info">Hire 1 Employee $<span>50</span></button>
+          </div>
         </div>
       </div>
       <div class="col-md-6 text-center">
         <div class="row">
           <div class="col">
-            <p>Hire Help x2</p>
+            <p>Hire 1 Employee x2</p>
           </div>
           <div class="col">
-            <p>Hire Help x4</p>
+            <p>Hire 3 Employees x10</p>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <p>Hire Help x8</p>
+            <p>Hire 2 Employees x4</p>
           </div>
           <div class="col">
             <p>Golden Spatula x10</p>
