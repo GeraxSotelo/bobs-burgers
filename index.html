@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
   <link rel="stylesheet" href="rotateIn.css">
+  <link rel="stylesheet" href="animate.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Bob's Burgers</title>
 </head>
@@ -27,9 +28,13 @@
       <div class="col-12 col-md-6">
         <div class="row text-center">
           <div class="col-12">
-            <img id="bob-pic" onclick="flip()"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg"
-              alt="">
+            <div class="bob-burger">
+              <img id="bob-pic" onclick="flip()" src="https://media1.giphy.com/media/26uf69FW691wALCVi/source.gif"
+                alt="">
+              <img id="burger-pic" class="animated rotateIn"
+                src="https://img.pngio.com/beef-burger-patties-meat-lodge-burger-patty-png-1024_493.png" alt="">
+            </div>
+
           </div>
           <div class="col-12">
             <h2>Money: $<span id="money-display">0</span></h2>
@@ -70,13 +75,13 @@
         <div class="row pt-3 pb-1">
           <div class="col">
             <button id="upgrade-spatula" class="btn btn-info" onclick="buySpatulaUpgrade()">
-              <span id="spatula-display">Big</span> Spatula $<span id="spatula-price">50</span>
+              <span id="spatula-display">Big</span> Spatula <span id="spatula-price">$5</span>
             </button>
           </div>
-          <div class="col"><button class="btn btn-info">Placeholder Button $<span>100</span></button></div>
+          <div class="col"><button class="btn btn-info">Placeholder Button <span>$100</span></button></div>
         </div>
         <div class="row pt-1 pb-3">
-          <div class="col"><button class="btn btn-info">Placeholder Button $<span>100</span></button></div>
+          <div class="col"><button class="btn btn-info">Placeholder Button $<span>$100</span></button></div>
           <div class="col"><button id="hire-employee" class="btn btn-info">Hire 1 Employee $<span>50</span></button>
           </div>
         </div>
