@@ -29,22 +29,9 @@ main {
   letter-spacing: 3px;
 }
 
-.bob-burger {
-  position: relative;
-  max-width: 20em;
-  margin: auto;
-}
-
 #bob-pic {
   cursor: pointer;
   max-width: 20em;
-}
-
-#burger-pic {
-  max-width: 4em;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
 .revenue {
@@ -62,9 +49,24 @@ main {
   width: 1.1em;
 }
 
-#multiplier-img img {
+#multiplier-img .employee {
   max-width: 10em;
   max-height: 10em;;
+  display: none;
+}
+
+.burger {
+  position: relative;
+  max-width: 20em;
+  margin: auto;
+}
+
+.burger-meat {
+  max-width: 2em;
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  transform: translateX(-50%);
   display: none;
 }
 
@@ -73,7 +75,7 @@ main {
     max-width: 14.5em;
   }
 
-  #multiplier-img img {
+  #multiplier-img .employee {
     max-width: 8em;
   }
 }

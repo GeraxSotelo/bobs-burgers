@@ -70,6 +70,7 @@ function startInterval() {
 
 function displayUnset(index) {
   document.querySelector(`#multiplier-img-${employeeName[index]}`).style.display = "unset";
+  document.querySelector(`#burger-pic-${employeeName[index]}`).style.display = "unset";
 }
 
 function buyHireEmployee() {
