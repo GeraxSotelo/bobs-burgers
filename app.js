@@ -17,9 +17,9 @@ let automaticUpgrades = {
 let moneyDisplay = document.querySelector("#money-display");
 let upgradeSpatula = document.querySelector("#upgrade-spatula");
 let spatulaDisplay = document.querySelector("#spatula-display");
-let spatulaPrice = document.querySelector("#spatula-price");
+let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
 let spatulasIndex = 0;
-let sPrice = clickUpgrades.spatulas.price;
+let spatulaPrice = clickUpgrades.spatulas.price;
 let sName = clickUpgrades.spatulas.name;
 let sMultiplier = 0;
 let employeesIndex = 0;
@@ -40,25 +40,35 @@ function flip() {
 
 
 function buySpatulaUpgrade() {
-  if (spatulasIndex < sPrice.length && money >= sPrice[spatulasIndex]) {
-    money -= sPrice[spatulasIndex];
+  if (spatulasIndex < spatulaPrice.length && money >= spatulaPrice[spatulasIndex]) {
+    money -= spatulaPrice[spatulasIndex];
     sMultiplier = clickUpgrades.spatulas.multiplier[spatulasIndex];
     spatulasIndex++;
-    if (spatulasIndex >= sPrice.length) {
+    if (spatulasIndex >= spatulaPrice.length) {
       spatulaDisplay.innerText = "";
-      spatulaPrice.innerText = "";
+      spatulaPriceDisplay.innerText = "";
     } else {
       spatulaDisplay.innerText = sName[spatulasIndex];
-      spatulaPrice.innerText = `$${sPrice[spatulasIndex]}`;
+      spatulaPriceDisplay.innerText = `$${spatulaPrice[spatulasIndex]}`;
     }
   }
   update();
+}
+
+function addAutoUpgrades() {
+  money += eMultiplier;
+}
+
+function startInterval() {
+  setInterval(addAutoUpgrades, 3000);
 }
 
 function buyHireEmployee() {
   if (employeesIndex < ePrice.length && money >= ePrice[employeesIndex]) {
     money -= ePrice[employeesIndex];
     eMultiplier = automaticUpgrades.employees.multiplier[employeesIndex];
+    addAutoUpgrades();
+    employeesIndex++;
   }
 
   update();
