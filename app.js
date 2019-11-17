@@ -22,6 +22,8 @@ let spatulasIndex = 0;
 let sPrice = clickUpgrades.spatulas.price;
 let sName = clickUpgrades.spatulas.name;
 let sMultiplier = 0;
+let employeesIndex = 0;
+let ePrice = automaticUpgrades.employees.price;
 let eMultiplier = 0;
 let money = 0;
 
@@ -32,7 +34,7 @@ function update() {
 }
 
 function flip() {
-  money += 1 + sMultiplier + eMultiplier;
+  money += 1 + sMultiplier;
   update();
 }
 
@@ -54,8 +56,9 @@ function buySpatulaUpgrade() {
 }
 
 function buyHireEmployee() {
-  if () {
-
+  if (employeesIndex < ePrice.length && money >= ePrice[employeesIndex]) {
+    money -= ePrice[employeesIndex];
+    eMultiplier = automaticUpgrades.employees.multiplier[employeesIndex];
   }
 
   update();
