@@ -7,9 +7,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="rotateIn.css">
-  <link rel="stylesheet" href="animate.min.css">
+  <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet">
   <title>Bob's Burgers</title>
 </head>
 
@@ -20,8 +20,8 @@
   <main class="container-fluid">
 
     <div class="row">
-      <div class="col-12 text-center">
-        <h2>Title</h2>
+      <div class="col-12 text-center title">
+        <h2>Bob's Burgers</h2>
       </div>
     </div>
     <div class="row">
@@ -29,15 +29,16 @@
         <div class="row text-center">
           <div class="col-12">
             <div class="bob-burger">
-              <img id="bob-pic" onclick="flip()" src="https://media1.giphy.com/media/26uf69FW691wALCVi/source.gif"
-                alt="">
+              <img id="bob-pic" class="box-shadow" onclick="flip()"
+                src="https://media1.giphy.com/media/26uf69FW691wALCVi/source.gif" alt="">
               <img id="burger-pic" class="animated rotateIn"
-                src="https://img.pngio.com/beef-burger-patties-meat-lodge-burger-patty-png-1024_493.png" alt="">
+                src="https://www.tynker.com/projects/images/5ab0a468949b56cf038b456a/burger-meat---burger-meat1.png"
+                alt="">
             </div>
 
           </div>
           <div class="col-12">
-            <h2>Money: $<span id="money-display">0</span></h2>
+            <h2 class="bg-white">Revenue: $<span id="money-display">0</span></h2>
           </div>
         </div>
       </div>
@@ -45,26 +46,23 @@
       <div id="multiplier-img" class="col-12 col-md-6 text-center">
         <div class="row pb-1">
           <div class="col-6">
-            <img id="multiplier-img-1"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg"
+            <img id="multiplier-img-1" class="box-shadow" src="https://media1.giphy.com/media/12MA6IViBmZ5te/giphy.gif"
               alt="">
           </div>
           <div class="col-6">
-            <img id="multiplier-img-2"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg"
+            <img id="multiplier-img-2" class="box-shadow" src="https://media3.giphy.com/media/okXsTqmNUNs52/giphy.gif"
               alt="">
           </div>
         </div>
         <div class="row pt-1">
           <div class="col-6">
-            <img id="multiplier-img-3"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg"
+            <img id="multiplier-img-3" class="box-shadow"
+              src="http://38.media.tumblr.com/8c30948ac95e2fe583d0938fdd046b88/tumblr_noiz7koWFO1tvauwuo1_250.gif"
               alt="">
           </div>
           <div class="col-6">
-            <img id="multiplier-img-4"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/1200px-FullMoon2010.jpg"
-              alt="">
+            <img id="multiplier-img-4" class="box-shadow"
+              src="https://media.giphy.com/media/xT1XGHkP7hqm0JvWrS/giphy.gif" alt="">
           </div>
         </div>
       </div>
@@ -75,14 +73,17 @@
         <div class="row pt-3 pb-1">
           <div class="col">
             <button id="upgrade-spatula" class="btn btn-info" onclick="buySpatulaUpgrade()">
-              <span id="spatula-display">Big</span> Spatula <span id="spatula-price">$5</span>
+              <img src="images/spatula.png">
+              <span id="spatula-display"> Big</span> Spatula <span id="spatula-price">$5</span>
             </button>
           </div>
           <div class="col"><button class="btn btn-info">Placeholder Button <span>$100</span></button></div>
         </div>
         <div class="row pt-1 pb-3">
           <div class="col"><button class="btn btn-info">Placeholder Button $<span>$100</span></button></div>
-          <div class="col"><button id="hire-employee" class="btn btn-info">Hire 1 Employee $<span>50</span></button>
+          <div class="col"><button id="hire-employee" class="btn btn-info" onclick="buyHireEmployee()">
+              <img src="images/employee.png">
+              Hire 1 Employee $<span>50</span></button>
           </div>
         </div>
       </div>

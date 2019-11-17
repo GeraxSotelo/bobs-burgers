@@ -5,7 +5,24 @@ body {
 }
 
 main {
+  background: url("images/kitchen.jpg") no-repeat center transparent;
+  background-size: cover;
   flex-grow: 2;
+}
+
+.box-shadow {
+  border: 1px solid black;
+  box-shadow: 3px 3px 5px black;
+}
+
+.title {
+  background-color: seashell;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.title h2 {
+  font-size: 2.2em;
+  letter-spacing: 2px;
 }
 
 .bob-burger {
@@ -15,18 +32,33 @@ main {
 }
 
 #bob-pic {
+  cursor: pointer;
   max-width: 20em;
 }
 
 #burger-pic {
-  max-width: 4.5em;
+  max-width: 4em;
   position: absolute;
   top: 0;
   left: 0;
 }
 
+h2.bg-white {
+  margin: auto;
+  width: 10em;
+}
+
+#upgrade-spatula img {
+  width: 1.1em;
+}
+
+#hire-employee img {
+  width: 1.1em;
+}
+
 #multiplier-img img {
   max-width: 10em;
+  max-height: 10em;;
   /* display: none; */
 }
 

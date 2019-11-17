@@ -1,9 +1,17 @@
 let clickUpgrades = {
   spatulas: {
-    name: ["Big", "Bigger"],
-    price: [5, 10],
-    multiplier: [1, 3]
-  },
+    name: ["Big", "Bigger", "Golden"],
+    price: [5, 10, 15],
+    multiplier: [1, 3, 5]
+  }
+}
+
+let automaticUpgrades = {
+  employees: {
+    names: [1, 2, 3, 4],
+    price: [5, 10, 15, 20],
+    multiplier: [1, 2, 4, 10]
+  }
 }
 
 let moneyDisplay = document.querySelector("#money-display");
@@ -41,6 +49,13 @@ function buySpatulaUpgrade() {
       spatulaDisplay.innerText = sName[spatulasIndex];
       spatulaPrice.innerText = `$${sPrice[spatulasIndex]}`;
     }
+  }
+  update();
+}
+
+function buyHireEmployee() {
+  if () {
+
   }
 
   update();
