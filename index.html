@@ -20,10 +20,12 @@
   <main class="container-fluid">
 
     <div class="row">
-      <div class="col-12 text-center title">
-        <h2>Bob's Burgers</h2>
+      <div class="col-12 text-center title pt-1 pb-1">
+        <img class="box-shadow" src="images/logo.png" alt="">
+        <!-- <h2>Bob's Burgers</h2> -->
       </div>
     </div>
+
     <div class="row">
       <div class="col-12 col-md-6">
         <div class="row text-center">
@@ -78,7 +80,7 @@
           <div class="col"><button class="btn btn-info">Placeholder Button $<span>$100</span></button></div>
           <div class="col"><button id="hire-employee" class="btn btn-info" onclick="buyHireEmployee()">
               <img src="images/employee.png">
-              Hire 1 Employee $<span>50</span></button>
+              Hire 1 Employee <span id="employee-price-display">$50</span></button>
           </div>
         </div>
       </div>

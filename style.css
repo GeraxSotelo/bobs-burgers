@@ -16,8 +16,12 @@ main {
 }
 
 .title {
-  background-color: seashell;
+  background-color: lightslategray;
   font-family: 'Bebas Neue', cursive;
+}
+
+.title img {
+  max-height: 3.5em;
 }
 
 .title h2 {

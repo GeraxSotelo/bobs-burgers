@@ -18,12 +18,13 @@ let moneyDisplay = document.querySelector("#money-display");
 let upgradeSpatula = document.querySelector("#upgrade-spatula");
 let spatulaDisplay = document.querySelector("#spatula-display");
 let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
+let employeePriceDisplay = document.querySelector("#employee-price-display");
 let spatulasIndex = 0;
 let spatulaPrice = clickUpgrades.spatulas.price;
 let sName = clickUpgrades.spatulas.name;
 let sMultiplier = 0;
 let employeesIndex = 0;
-let ePrice = automaticUpgrades.employees.price;
+let employeePrice = automaticUpgrades.employees.price;
 let eMultiplier = 0;
 let money = 0;
 
@@ -41,7 +42,7 @@ function flip() {
 
 function buySpatulaUpgrade() {
   if (spatulasIndex < spatulaPrice.length && money >= spatulaPrice[spatulasIndex]) {
-    money -= spatulaPrice[spatulasIndex];
+    money -= spatulaPrice[spatulasIndex]; //subtract cost
     sMultiplier = clickUpgrades.spatulas.multiplier[spatulasIndex];
     spatulasIndex++;
     if (spatulasIndex >= spatulaPrice.length) {
@@ -57,18 +58,27 @@ function buySpatulaUpgrade() {
 
 function addAutoUpgrades() {
   money += eMultiplier;
+  console.log("updated: " + money);
+  update();
 }
 
+let myInterval;
 function startInterval() {
-  setInterval(addAutoUpgrades, 3000);
+  myInterval = setInterval(addAutoUpgrades, 3000);
 }
 
 function buyHireEmployee() {
-  if (employeesIndex < ePrice.length && money >= ePrice[employeesIndex]) {
-    money -= ePrice[employeesIndex];
+  if (employeesIndex < employeePrice.length && money >= employeePrice[employeesIndex]) {
+    clearInterval(myInterval); //clear previous setInterval or it will run several at a time
+    money -= employeePrice[employeesIndex];  //subtract cost
     eMultiplier = automaticUpgrades.employees.multiplier[employeesIndex];
-    addAutoUpgrades();
+    startInterval();
     employeesIndex++;
+    if (employeesIndex >= employeePrice.length) {
+      employeePriceDisplay.innerText = "";
+    } else {
+      employeePriceDisplay.innerText = `$${employeePrice[employeesIndex]}`;
+    }
   }
 
   update();
