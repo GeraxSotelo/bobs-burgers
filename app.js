@@ -8,7 +8,7 @@ let clickUpgrades = {
 
 let automaticUpgrades = {
   employees: {
-    names: [1, 2, 3, 4],
+    name: [1, 2, 3, 4],
     price: [5, 10, 15, 20],
     multiplier: [1, 2, 4, 10]
   }
@@ -21,21 +21,22 @@ let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
 let employeePriceDisplay = document.querySelector("#employee-price-display");
 let spatulasIndex = 0;
 let spatulaPrice = clickUpgrades.spatulas.price;
-let sName = clickUpgrades.spatulas.name;
-let sMultiplier = 0;
+let spatulaName = clickUpgrades.spatulas.name;
+let spatulaMultiplier = 0;
 let employeesIndex = 0;
 let employeePrice = automaticUpgrades.employees.price;
-let eMultiplier = 0;
+let employeeName = automaticUpgrades.employees.name;
+let employeeMultiplier = 0;
 let money = 0;
 
-// document.querySelector("#multiplier-img-1").style.display = "unset";
+
 
 function update() {
   moneyDisplay.innerText = money;
 }
 
 function flip() {
-  money += 1 + sMultiplier;
+  money += 1 + spatulaMultiplier;
   update();
 }
 
@@ -43,13 +44,14 @@ function flip() {
 function buySpatulaUpgrade() {
   if (spatulasIndex < spatulaPrice.length && money >= spatulaPrice[spatulasIndex]) {
     money -= spatulaPrice[spatulasIndex]; //subtract cost
-    sMultiplier = clickUpgrades.spatulas.multiplier[spatulasIndex];
+    spatulaMultiplier = clickUpgrades.spatulas.multiplier[spatulasIndex];
     spatulasIndex++;
     if (spatulasIndex >= spatulaPrice.length) {
       spatulaDisplay.innerText = "";
       spatulaPriceDisplay.innerText = "";
+      document.querySelector("#upgrade-spatula").disabled = true;
     } else {
-      spatulaDisplay.innerText = sName[spatulasIndex];
+      spatulaDisplay.innerText = spatulaName[spatulasIndex];
       spatulaPriceDisplay.innerText = `$${spatulaPrice[spatulasIndex]}`;
     }
   }
@@ -57,8 +59,7 @@ function buySpatulaUpgrade() {
 }
 
 function addAutoUpgrades() {
-  money += eMultiplier;
-  console.log("updated: " + money);
+  money += employeeMultiplier;
   update();
 }
 
@@ -67,15 +68,21 @@ function startInterval() {
   myInterval = setInterval(addAutoUpgrades, 3000);
 }
 
+function displayUnset(index) {
+  document.querySelector(`#multiplier-img-${employeeName[index]}`).style.display = "unset";
+}
+
 function buyHireEmployee() {
   if (employeesIndex < employeePrice.length && money >= employeePrice[employeesIndex]) {
     clearInterval(myInterval); //clear previous setInterval or it will run several at a time
     money -= employeePrice[employeesIndex];  //subtract cost
-    eMultiplier = automaticUpgrades.employees.multiplier[employeesIndex];
+    displayUnset(employeesIndex);
+    employeeMultiplier = automaticUpgrades.employees.multiplier[employeesIndex];
     startInterval();
     employeesIndex++;
     if (employeesIndex >= employeePrice.length) {
       employeePriceDisplay.innerText = "";
+      document.querySelector("#hire-employee").disabled = true;
     } else {
       employeePriceDisplay.innerText = `$${employeePrice[employeesIndex]}`;
     }

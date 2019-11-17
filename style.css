@@ -65,7 +65,7 @@ main {
 #multiplier-img img {
   max-width: 10em;
   max-height: 10em;;
-  /* display: none; */
+  display: none;
 }
 
 @media only screen and (max-width: 767px) {
