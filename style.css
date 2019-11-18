@@ -96,7 +96,15 @@ main {
     max-width: 6em;
     max-height: 8em;
   }
+
 }
+
+@media only screen and (max-width: 481px) {
+  .burger-meat {
+    left: 42%;
+  }
+}
+
 
 button {
   height: 100%;
