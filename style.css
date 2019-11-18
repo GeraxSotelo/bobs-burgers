@@ -131,6 +131,9 @@ button {
 
 .instructions p {
   background-color: rgb(219, 219, 219);
+  border: 1px solid black;
+  border-radius: 5%;
+  box-shadow: 2px 2px 4px black;
   font-family: 'Bebas Neue', cursive;
 }
 
