@@ -1,7 +1,7 @@
 let clickUpgrades = {
   spatulas: {
     name: ["Big", "Bigger", "Golden"],
-    price: [20, 100, 500],
+    price: [20, 200, 1000],
     multiplier: [1, 5, 10],
   }
 }
@@ -9,7 +9,7 @@ let clickUpgrades = {
 let automaticUpgrades = {
   employees: {
     name: [1, 2, 3, 4],
-    price: [50, 100, 200, 300],
+    price: [50, 200, 300, 500],
     multiplier: [2, 4, 8, 10]
   }
 }
