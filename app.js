@@ -35,12 +35,27 @@ let money = 0;
 
 function update() {
   moneyDisplay.innerText = money;
+  enableBtns();
 }
 
 function flip() {
   money += 1 + spatulaMultiplier;
   document.querySelector(".tap").classList.remove("infinite");
   update();
+}
+
+function enableBtns() {
+  if (money >= spatulaPrice[spatulasIndex]) {
+    document.querySelector("#upgrade-spatula").disabled = false;
+  } else {
+    document.querySelector("#upgrade-spatula").disabled = true;
+  }
+
+  if (money >= employeePrice[employeesIndex]) {
+    document.querySelector("#hire-employee").disabled = false;
+  } else {
+    document.querySelector("#hire-employee").disabled = true;
+  }
 }
 
 
