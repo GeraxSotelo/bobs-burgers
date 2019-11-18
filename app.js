@@ -2,7 +2,7 @@ let clickUpgrades = {
   spatulas: {
     name: ["Big", "Bigger", "Golden"],
     price: [20, 200, 1000],
-    multiplier: [1, 5, 10],
+    multiplier: [1, 4, 9],
   }
 }
 
@@ -18,6 +18,7 @@ let moneyDisplay = document.querySelector("#money-display");
 let upgradeSpatula = document.querySelector("#upgrade-spatula");
 let spatulaDisplay = document.querySelector("#spatula-display");
 let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
+let spatulaMultiplierDisplay = document.querySelector("#spatula-multiplier-display");
 let employeeDisplay = document.querySelector("#employee-display");
 let employeePriceDisplay = document.querySelector("#employee-price-display");
 let spatulasIndex = 0;
@@ -54,7 +55,9 @@ function buySpatulaUpgrade() {
       document.querySelector("#upgrade-spatula").disabled = true;
     } else {
       spatulaDisplay.innerText = spatulaName[spatulasIndex];
+      debugger;
       spatulaPriceDisplay.innerText = `$${spatulaPrice[spatulasIndex]}`;
+      spatulaMultiplierDisplay.innerText = `${clickUpgrades.spatulas.multiplier[spatulasIndex]}`;
     }
   }
   update();
@@ -67,7 +70,7 @@ function addAutoUpgrades() {
 
 let myInterval;
 function startInterval() {
-  myInterval = setInterval(addAutoUpgrades, 4000);
+  myInterval = setInterval(addAutoUpgrades, 3000);
 }
 
 function displayUnset(index) {

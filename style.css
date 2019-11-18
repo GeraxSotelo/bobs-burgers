@@ -51,7 +51,7 @@ main {
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 2px;
   margin: auto;
-  width: 10em;
+  max-width: 10em;
 }
 
 .spatula-icon {
@@ -131,7 +131,7 @@ button {
   font-family: 'Bebas Neue', cursive;
 }
 
-.instructions img {
+.hamburger {
   padding-left: 2px;
   max-width: 1em;
 }
