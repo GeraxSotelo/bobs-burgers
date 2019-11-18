@@ -16,7 +16,6 @@ main {
 }
 
 .title {
-  background-color: lightslategray;
   font-family: 'Bebas Neue', cursive;
 }
 
@@ -35,14 +34,23 @@ main {
 }
 
 .revenue {
+  background-color: rgb(133, 142, 151);
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 2px;
   margin: auto;
   width: 10em;
 }
 
-#upgrade-spatula img {
+#spatula-icon {
   width: 1.1em;
+}
+
+.bigger-icon {
+  width: 1.3em;
+}
+
+.gold-icon {
+  color: gold;
 }
 
 #hire-employee img {
@@ -65,7 +73,7 @@ main {
   max-width: 2em;
   position: absolute;
   top: 50%;
-  left: 43%;
+  left: 45%;
   transform: translateX(-50%);
   display: none;
 }
@@ -76,10 +84,21 @@ main {
   }
 
   #multiplier-img .employee {
-    max-width: 8em;
+    max-width: 6em;
+    max-height: 8em;
   }
 }
 
 button {
   height: 100%;
+}
+
+.instructions p {
+  background-color: rgb(219, 219, 219);
+  font-family: 'Bebas Neue', cursive;
+}
+
+.instructions img {
+  padding-left: 2px;
+  max-width: 1em;
 }

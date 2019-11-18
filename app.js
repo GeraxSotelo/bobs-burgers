@@ -18,6 +18,7 @@ let moneyDisplay = document.querySelector("#money-display");
 let upgradeSpatula = document.querySelector("#upgrade-spatula");
 let spatulaDisplay = document.querySelector("#spatula-display");
 let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
+let employeeDisplay = document.querySelector("#employee-display");
 let employeePriceDisplay = document.querySelector("#employee-price-display");
 let spatulasIndex = 0;
 let spatulaPrice = clickUpgrades.spatulas.price;
@@ -82,6 +83,7 @@ function buyHireEmployee() {
     startInterval();
     employeesIndex++;
     if (employeesIndex >= employeePrice.length) {
+      employeeDisplay.innerText = "";
       employeePriceDisplay.innerText = "";
       document.querySelector("#hire-employee").disabled = true;
     } else {

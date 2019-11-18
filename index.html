@@ -34,7 +34,7 @@
               src="https://media1.giphy.com/media/26uf69FW691wALCVi/source.gif">
           </div>
           <div class="col-12">
-            <h2 class="revenue bg-white box-shadow">Revenue: $<span id="money-display">0</span></h2>
+            <h2 class="revenue box-shadow">Revenue: $<span id="money-display">0</span></h2>
           </div>
         </div>
       </div>
@@ -75,40 +75,41 @@
       </div>
     </div>
 
+    <!-- SECTION ---------------- BUTTONS -------------------->
     <div class="row">
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 text-center pt-1">
         <div class="row pt-3 pb-1">
           <div class="col">
             <button id="upgrade-spatula" class="btn btn-info" onclick="buySpatulaUpgrade()">
-              <img src="images/spatula.png">
+              <img id="spatula-icon" src="images/spatula.png">
               <span id="spatula-display"> Big</span> Spatula <span id="spatula-price-display">$5</span>
             </button>
           </div>
-          <div class="col"><button class="btn btn-info">Placeholder Button <span>$100</span></button></div>
-        </div>
-        <div class="row pt-1 pb-3">
-          <div class="col"><button class="btn btn-info">Placeholder Button $<span>$100</span></button></div>
           <div class="col"><button id="hire-employee" class="btn btn-info" onclick="buyHireEmployee()">
               <img src="images/employee.png">
-              Hire 1 Employee <span id="employee-price-display">$50</span></button>
+              <span id="employee-display">Hire 1</span> Employee <span id="employee-price-display">$50</span></button>
           </div>
         </div>
+        <!-- <div class="row pt-1 pb-3">
+          <div class="col"><button class="btn btn-info">Placeholder Button $<span>$100</span></button></div>
+          <div class="col"><button class="btn btn-info">Placeholder Button <span>$100</span></button></div>
+        </div> -->
       </div>
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 text-center instructions pt-2">
         <div class="row">
           <div class="col">
-            <p>Hire 1 Employee x2</p>
+            <p>Hire 1 Employee +1 <img src="images/hamburger.png"></p>
           </div>
           <div class="col">
-            <p>Hire 3 Employees x10</p>
+            <p>Hire 2 Employees +2 <img src="images/hamburger.png"></p>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <p>Hire 2 Employees x4</p>
+            <p>Hire 3 Employees +4 <img src="images/hamburger.png"></p>
           </div>
           <div class="col">
-            <p>Golden Spatula x10</p>
+            <p>Hire 4 Employees +10 <img src="images/hamburger.png"></p>
           </div>
         </div>
       </div>
