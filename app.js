@@ -19,6 +19,7 @@ let upgradeSpatula = document.querySelector("#upgrade-spatula");
 let spatulaDisplay = document.querySelector("#spatula-display");
 let spatulaPriceDisplay = document.querySelector("#spatula-price-display");
 let spatulaMultiplierDisplay = document.querySelector("#spatula-multiplier-display");
+let hireEmployee = document.querySelector("#hire-employee");
 let employeeDisplay = document.querySelector("#employee-display");
 let employeePriceDisplay = document.querySelector("#employee-price-display");
 let spatulasIndex = 0;
@@ -46,15 +47,15 @@ function flip() {
 
 function enableBtns() {
   if (money >= spatulaPrice[spatulasIndex]) {
-    document.querySelector("#upgrade-spatula").disabled = false;
+    upgradeSpatula.disabled = false;
   } else {
-    document.querySelector("#upgrade-spatula").disabled = true;
+    upgradeSpatula.disabled = true;
   }
 
   if (money >= employeePrice[employeesIndex]) {
-    document.querySelector("#hire-employee").disabled = false;
+    hireEmployee.disabled = false;
   } else {
-    document.querySelector("#hire-employee").disabled = true;
+    hireEmployee.disabled = true;
   }
 }
 
