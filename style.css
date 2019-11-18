@@ -28,29 +28,34 @@ main {
   letter-spacing: 3px;
 }
 
+.bob-container {
+  margin: auto;
+  max-width: 20em;
+  position: relative;
+}
+
+.tap {
+  max-width: 3em;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+
 #bob-pic {
   cursor: pointer;
   max-width: 20em;
 }
 
 .revenue {
-  background-color: rgb(133, 142, 151);
+  background-color: rgb(160, 166, 173);
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 2px;
   margin: auto;
   width: 10em;
 }
 
-#spatula-icon {
+.spatula-icon {
   width: 1.1em;
-}
-
-.bigger-icon {
-  width: 1.3em;
-}
-
-.gold-icon {
-  color: gold;
 }
 
 #hire-employee img {
@@ -79,8 +84,12 @@ main {
 }
 
 @media only screen and (max-width: 767px) {
-  #bob-pic {
+  #bob-pic, .bob-container {
     max-width: 14.5em;
+  }
+
+  .tap {
+    max-width: 2.5em;
   }
 
   #multiplier-img .employee {

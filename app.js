@@ -2,7 +2,7 @@ let clickUpgrades = {
   spatulas: {
     name: ["Big", "Bigger", "Golden"],
     price: [5, 10, 15],
-    multiplier: [1, 3, 5]
+    multiplier: [1, 3, 5],
   }
 }
 
@@ -38,6 +38,7 @@ function update() {
 
 function flip() {
   money += 1 + spatulaMultiplier;
+  document.querySelector(".tap").classList.remove("infinite");
   update();
 }
 
@@ -66,7 +67,7 @@ function addAutoUpgrades() {
 
 let myInterval;
 function startInterval() {
-  myInterval = setInterval(addAutoUpgrades, 3000);
+  myInterval = setInterval(addAutoUpgrades, 4000);
 }
 
 function displayUnset(index) {
