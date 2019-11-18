@@ -37,8 +37,11 @@ main {
 .tap {
   max-width: 3em;
   position: absolute;
-  top: 7%;
-  left: 5%;
+  /* top: 7%;
+  left: 5%; */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #bob-pic {

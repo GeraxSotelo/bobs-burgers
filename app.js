@@ -31,6 +31,7 @@ let employeePrice = automaticUpgrades.employees.price;
 let employeeName = automaticUpgrades.employees.name;
 let employeeMultiplier = 0;
 let money = 0;
+let tapIcon = document.querySelector(".tap");
 
 
 
@@ -41,7 +42,8 @@ function update() {
 
 function flip() {
   money += 1 + spatulaMultiplier;
-  document.querySelector(".tap").classList.remove("infinite");
+  tapIcon.classList.remove("infinite");
+  tapIcon.style.display = "none";
   update();
 }
 
@@ -71,7 +73,6 @@ function buySpatulaUpgrade() {
       document.querySelector("#upgrade-spatula").disabled = true;
     } else {
       spatulaDisplay.innerText = spatulaName[spatulasIndex];
-      debugger;
       spatulaPriceDisplay.innerText = `$${spatulaPrice[spatulasIndex]}`;
       spatulaMultiplierDisplay.innerText = `${clickUpgrades.spatulas.multiplier[spatulasIndex]}`;
     }
