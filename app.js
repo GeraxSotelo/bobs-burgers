@@ -5,7 +5,7 @@ let clickUpgrades = {
     multiplier: [1, 5, 8, 12],
   }
 }
-//JAKE, WHY ARE YOU LOOKING AT MY CODE??
+
 let automaticUpgrades = {
   employees: {
     name: [1, 2, 3, 4],
